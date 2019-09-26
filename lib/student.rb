@@ -34,7 +34,7 @@ class Student
         SQL
     DB[:conn].execute(sql, self.name, self.grade)
 
-    @id = DB[:conn].execute("SELECT id FROM students")
+    @id = DB[:conn].execute("SELECT id FROM students")[0][0]
   end
 
 
@@ -45,5 +45,5 @@ class Student
     student
   end
 
-
+  
 end
